@@ -1,0 +1,98 @@
+# Relevant Section of Enzo Paramter File (NOT COMPLETE!) 
+ProblemType                              = 30      // cosmology simulation
+TopGridRank                              = 3
+TopGridDimensions                        = 64 64 64
+SelfGravity                              = 1       // gravity on
+TopGridGravityBoundary                   = 0       // Periodic BC for gravity
+LeftFaceBoundaryCondition                = 3 3 3   // same for fluid
+RightFaceBoundaryCondition               = 3 3 3
+RefineBy                                 = 2
+
+#
+CosmologySimulationOmegaBaryonNow        = 0.0441
+CosmologySimulationOmegaCDMNow           = 0.2139
+CosmologySimulationDensityName           = GridDensity
+CosmologySimulationVelocity1Name         = GridVelocities_x
+CosmologySimulationVelocity2Name         = GridVelocities_y
+CosmologySimulationVelocity3Name         = GridVelocities_z
+CosmologySimulationCalculatePositions    = 1
+CosmologySimulationParticleVelocity1Name = ParticleVelocities_x
+CosmologySimulationParticleVelocity2Name = ParticleVelocities_y
+CosmologySimulationParticleVelocity3Name = ParticleVelocities_z
+CosmologySimulationParticleDisplacement1Name = ParticleDisplacements_x
+CosmologySimulationParticleDisplacement2Name = ParticleDisplacements_y
+CosmologySimulationParticleDisplacement3Name = ParticleDisplacements_z
+
+#
+#  define cosmology parameters
+#
+ComovingCoordinates                      = 1       // Expansion ON
+CosmologyOmegaMatterNow                  = 0.27
+CosmologyOmegaLambdaNow                  = 0.7342
+CosmologyHubbleConstantNow               = 0.72     // in 100 km/s/Mpc
+CosmologyComovingBoxSize                 = 60    // in Mpc/h
+CosmologyMaxExpansionRate                = 0.015   // maximum allowed delta(a)/a
+CosmologyInitialRedshift                 = 50      //
+CosmologyFinalRedshift                   = 0       //
+GravitationalConstant                    = 1       // this must be true for cosmology
+#
+#
+ParallelRootGridIO                       = 1
+ParallelParticleIO                       = 1
+PartitionNestedGrids                     = 1
+CosmologySimulationNumberOfInitialGrids  = 2
+CosmologySimulationGridDimension[1]      =               28               28               28
+CosmologySimulationGridLeftEdge[1]       =            0.375            0.375            0.375
+CosmologySimulationGridRightEdge[1]      =          0.59375          0.59375          0.59375
+CosmologySimulationGridLevel[1]          = 1
+#
+# region allowed for further refinement
+#
+RefineRegionLeftEdge                     =         0.396875         0.396875         0.396875
+RefineRegionRightEdge                     =         0.571875         0.571875         0.571875
+
+
+
+#  set I/O and stop/start parameters
+#
+CosmologyOutputRedshift[0] = 99.0 
+CosmologyOutputRedshift[1] = 10.0
+CosmologyOutputRedshift[2] = 5.0  
+CosmologyOutputRedshift[3] = 4.0
+CosmologyOutputRedshift[4] = 3.0
+CosmologyOutputRedshift[5] = 2.0
+CosmologyOutputRedshift[6] = 1.5
+CosmologyOutputRedshift[7] = 1.0
+CosmologyOutputRedshift[8] = 0.75
+CosmologyOutputRedshift[9] = 0.5
+CosmologyOutputRedshift[10] = 0.25
+CosmologyOutputRedshift[11] = 0.0
+
+#
+#  set hydro parameters
+#
+Gamma                  = 1.6667
+HydroMethod            = 0
+DualEnergyFormalism    = 1     // use total & internal energy
+InterpolationMethod    = 1     // SecondOrderA
+PPMDiffusionParameter  = 0     // diffusion off
+CourantSafetyNumber    = 0.5
+FluxCorrection         = 1  // necessary for mass conservation in AMR
+ConservativeInterpolation = 0
+ParticleCourantSafetyNumber = 0.8
+
+#
+#  set cooling and feedback parameters
+#
+RadiativeCooling       = 0   // radiative cooling
+MultiSpecies           = 0   // non-equilibrium primordial cooling/chemistry
+RadiationFieldType     = 0   // UV background (only usable if MultiSpecies=1)
+StarParticleCreation   = 0   
+StarParticleFeedback   = 0
+
+#
+
+#
+#  set some global parameters
+#
+GreensFunctionMaxNumber   = 100   // # of greens function at any one time
