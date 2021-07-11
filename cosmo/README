@@ -1,0 +1,1 @@
+The codes contain an approximate model of this paper by John Wise et.al, here https://arxiv.org/abs/1403.6123. It uses Grackle for the chemistry library and one can use MUSIC if they would like a 3D rendering done. The Python code can be edited to plot the desired 2D rendering and sliced plots. 
