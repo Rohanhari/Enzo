@@ -1,1 +1,2 @@
 The code runs a (non-nested) grid with dark matter and baryon gas coupled. There are separate files for adiabatic case without adaptive mesh refinement (AMR) and one with AMR. There is also a file with the inital conditions given, do alter it for your case. This is a modified version of the test case, there is also a dark matter only file for convenience. plots.py is for rendering an image and scripts.py is for the plots from the output after the code is run. 
+You would need the yt toolkit to render and work on the post-processing. 
