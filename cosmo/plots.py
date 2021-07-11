@@ -1,7 +1,7 @@
 import yt
 
 
-ds = yt.load('RD0007/RD0007')
+ds = yt.load('RD0007/RD0007') #enter the name of the directory to load and render
 
 sc = yt.create_scene(ds, lens_type='perspective')
 
